@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+  <title>CLAY SUPERMARKET</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script src="tailwind-config.js" defer></script>
+  <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="flex flex-col md:flex-row bg-background p-6 md:h-screen md:min-h-[600px]">
+    <div class="flex-1 bg-gradient-to-b from-purple-500 to-blue-500 p-6 text-white md:flex md:items-center md:justify-center">
+      <div class="text-center">
+        <h1 class="text-4xl font-bold md:text-6xl">clay mart</h1>
+        <h2 class="text-2xl md:text-4xl">supermarket</h2>
+        <p class="text-lg md:text-2xl">zimmerman base road</p>
+      </div>
+    </div>
+    <div class="flex-1 flex flex-col items-center justify-center bg-zinc-200 p-6 md:h-full">
+      <div class="grid grid-cols-3 gap-4 mb-4">
+        <div class="w-16 h-16 bg-purple-600"></div>
+        <div class="w-16 h-16 bg-purple-600"></div>
+        <div class="w-16 h-16 bg-purple-600"></div>
+        <div class="w-16 h-16 bg-blue-600"></div>
+        <div class="w-16 h-16 bg-blue-600"></div>
+        <div class="w-16 h-16 bg-blue-600"></div>
+      </div>
+      <input type="text" placeholder="Enter details..." class="border border-zinc-400 p-2 mb-4 w-full" />
+      <button class="bg-gradient-to-r from-purple-500 to-blue-500 text-white p-2 rounded-lg w-full">
+        open to sell
+      </button>
+    </div>
+  </div>
+</body>
+</html>
