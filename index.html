@@ -1,37 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">\
-  <title>CLAY SUPERMARKET</title>
-  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-  <script src="tailwind-config.js" defer></script>
-  <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claymart Supermarket</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <div class="flex flex-col md:flex-row bg-background p-6 min-h-[75vh] md:min-h-screen md:h-screen">
-    <div class="flex-1 bg-gradient-to-b from-purple-500 to-blue-500 p-6 text-white flex items-center justify-center">
-      <div class="text-center">
-        <h1 class="text-4xl font-bold md:text-6xl">clay mart</h1>
-        <h2 class="text-2xl md:text-4xl">supermarket</h2>
-        <p class="text-lg md:text-2xl">zimmerman base road</p>
-      </div>
+<body class="relative bg-cover bg-center bg-no-repeat" style="background-image: url('Assets/bg.png');">
+    <!-- Background Opacity -->
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+
+    <!-- Main Content Section -->
+    <div class="relative z-10 min-h-screen flex flex-col items-center justify-center">
+        <h1 class="text-white text-3xl font-bold text-center mb-4 mt-12">Claymart Supermarket, Zimmerman</h1>
+
+        <div class="bg-white p-10 shadow-lg rounded-lg">
+            <h2 class="text-3xl font-bold text-center mb-8">Good morning, Welcome</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-2xl transform transition hover:scale-105 text-center">
+                    <div class="flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FF0040" viewBox="0 0 24 24" stroke="none" class="w-16 h-16">
+                            <path d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4 8 5.79 8 8s1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                    </div>
+                    <p class="mt-4 font-semibold" style="color: #FF0040;">Esther - cashier</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-2xl transform transition hover:scale-105 text-center">
+                    <div class="flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#008E87" viewBox="0 0 24 24" stroke="none" class="w-16 h-16">
+                            <path d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4 8 5.79 8 8s1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                    </div>
+                    <p class="mt-4 text-teal-500 font-semibold">Esther - cashier</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-2xl transform transition hover:scale-105 text-center">
+                    <div class="flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FF0040" viewBox="0 0 24 24" stroke="none" class="w-16 h-16">
+                            <path d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4 8 5.79 8 8s1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                    </div>
+                    <p class="mt-4 text-red-800 font-semibold">Esther - cashier</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-2xl transform transition hover:scale-105 text-center">
+                    <div class="flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="orange" viewBox="0 0 24 24" stroke="none" class="w-16 h-16">
+                            <path d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4 8 5.79 8 8s1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                    </div>
+                    <p class="mt-4 text-yellow-500 font-semibold">Moses - cashier</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-2xl transform transition hover:scale-105 text-center">
+                    <div class="flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke="none" class="w-16 h-16">
+                            <path d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4 8 5.79 8 8s1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                    </div>
+                    <p class="mt-4 text-black font-semibold">Joy - cashier</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-white p-6 rounded-lg shadow-2xl transform transition hover:scale-105 text-center">
+                    <div class="flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="green" viewBox="0 0 24 24" stroke="none" class="w-16 h-16">
+                            <path d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4 8 5.79 8 8s1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                    </div>
+                    <p class="mt-4 text-green-600 font-semibold">Faith - admin</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="flex-1 flex flex-col items-center justify-center bg-zinc-200 p-6">
-      <div class="grid grid-cols-3 gap-4 mb-4">
-        <div class="w-16 h-16 bg-purple-600"></div>
-        <div class="w-16 h-16 bg-purple-600"></div>
-        <div class="w-16 h-16 bg-purple-600"></div>
-        <div class="w-16 h-16 bg-blue-600"></div>
-        <div class="w-16 h-16 bg-blue-600"></div>
-        <div class="w-16 h-16 bg-blue-600"></div>
-      </div>
-      <input type="text" placeholder="Enter details..." class="border border-zinc-400 p-2 mb-4 w-full" />
-      <button class="bg-gradient-to-r from-purple-500 to-blue-500 text-white p-2 rounded-lg w-full">
-        open to sell
-      </button>
-    </div>
-  </div>
 </body>
 </html>
