@@ -141,11 +141,11 @@
             <!-- Total Price and Action Buttons -->
             <div class="mt-6 flex justify-between items-center">
                 <div class="text-2xl font-bold">
-                    Total Price <span class="pink">Ksh 3,500</span>
+                    Total Price <span class="pink" id="totalPrice">Ksh 3,500</span>
                 </div>
                 <div class="flex space-x-4">
                     <button class="bg-black text-white px-6 py-2 rounded-md">Hold Sale</button>
-                    <button class="bg-red-600 text-white px-6 py-2 rounded-md">Clear Sale</button>
+                    <button id="clear-sales-btn" class="bg-red-600 text-white px-6 py-2 rounded-md">Clear Sale</button>
                     <button class="bg-green-600 text-white px-6 py-2 rounded-md">Complete Sale</button>
                 </div>
             </div>
@@ -169,6 +169,14 @@
                     row.classList.remove('bg-pink-300'); 
                 }
             });
+        });
+
+        // Clear Sale button functionality
+        document.getElementById('clear-sales-btn').addEventListener('click', function() {
+            const totalPrice = document.getElementById("totalPrice");
+            const tbody = document.querySelector('table tbody'); 
+            tbody.innerHTML = ''; 
+            totalPrice.innerHTML = 'Ksh 0.00';
         });
     </script>
 </body>
