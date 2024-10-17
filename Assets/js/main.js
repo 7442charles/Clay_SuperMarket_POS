@@ -29,7 +29,7 @@ function handleDelete() {
 function handleGo() {
     if (pin.length === 4) {
         alert(`PIN entered: ${pin.join('')}`);
-        // Add logic here to proceed with the entered PIN
+        //TODO: IZOOH ADD THE LOGIC TO VERIFY THE PIN HERE
     } else {
         alert('Please enter a 4-digit PIN.');
     }
@@ -45,3 +45,4 @@ function handleKey(event) {
         handleGo();
     }
 }
+

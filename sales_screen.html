@@ -3,9 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CLAY SUPERMARKET || SALES</title>
+    <title>POS - Claymart Supermarket</title>
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Assets/css/styles.css">
 </head>
-<body>
-    
+<body class="bg-gray-50">
+
+    <!-- Sidebar -->
+    <div class="flex">
+        <aside class="w-1/6 bg-pink-600 text-white h-screen flex flex-col items-start py-10 px-4">
+            <div class="mb-8">
+                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-pink-600 mb-2">
+                    <span class="text-2xl fa fa-user"></span>
+                </div>
+                <p>Esther - cashier</p>
+            </div>
+            <nav>
+                <a href="#" class="block py-2 hover:bg-red-500 w-full">Sales session</a>
+                <a href="#" class="block py-2 mt-2 hover:bg-pink-500 w-full">
+                    Logout &nbsp;&nbsp; <span class="fa fa-sign-out"></span>
+                </a>
+            </nav>
+        </aside>
+        
+
+        <!-- Main Content -->
+        <main class="w-5/6 p-8">
+            <!-- Header -->
+            <header class="mb-6 ">
+                <div class="flex items-center justify-between p-4 bg-background">
+                    <div class="pink">
+                        <h1 class="text-3xl font-bold">Claymart Supermarket, Zimmerman</h1>
+                        <h2 class="text-xl font-semibold">Point of sale</h2>
+                    </div>
+                    <div class="ml-auto flex space-x-2 color-black">
+                        <button id="sales1" class="bg-secondary text-secondary-foreground py-2 px-2 rounded-lg hover:bg-secondary/80">Held Sales <span class="fa fa-step-forward"></span></button>
+                        <button id="sales2" class="bg-secondary text-secondary-foreground py-2 px-2 rounded-lg hover:bg-secondary/80">Held Sales <span class="fa fa-step-forward"></span></button>
+                        <button id="sales3" class="bg-secondary text-secondary-foreground py-2 px-2 rounded-lg hover:bg-secondary/80">Held Sales <span class="fa fa-step-forward"></span></button>
+                    </div>
+                </div>
+            </header>
+            
+            
+            
+
+            <!-- Search and Buttons -->
+            <div class="flex items-center space-x-2 p-4 bg-white shadow-md rounded-lg">
+                <div class="flex-grow">
+                  <input type="text" placeholder="search item by name or add by barcode" class="w-full p-2 border border-zinc-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" />
+                </div>
+                <button class="flex items-center justify-center bg-pink-500 text-white p-2 rounded-lg">
+                  <span class="mr-1 fa fa-search"></span>
+                </button>
+                <button class="bg-red-500 text-white p-2 rounded-lg flex items-center">
+                  <span class="mr-1">Remove Item</span>
+                  <span class="text-white fa fa-times-circle"></i></span>
+                </button>
+                <button class="bg-green-500 text-white p-2 rounded-lg flex items-center">
+                  <span class="mr-1">Undo remove</span>
+                  <span class="text-white fa fa-repeat"> </span>
+                </button>
+            </div>
+
+            <!-- Product Table -->
+            <div class="bg-white mt-4 shadow-md rounded-md overflow-hidden">
+                <div class="h-64 overflow-y-auto">
+                    <table class="w-full text-left">
+                        <thead class="bgpink text-white">
+                            <tr>
+                                <th class="py-3 px-4">Select</th> <!-- Added Select header for checkbox -->
+                                <th class="py-3 px-4">Product / Item</th>
+                                <th class="py-3 px-4">Quantity</th>
+                                <th class="py-3 px-4">Discount</th>
+                                <th class="py-3 px-4">Total Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b">
+                                <td class="py-4 px-4">
+                                    <input type="checkbox" class="select-item"> <!-- Added checkbox -->
+                                </td>
+                                <td class="py-4 px-4">4 KG Kiimbo cooking oil, packed in a 2 container</td>
+                                <td class="py-4 px-4 quantity">2</td>
+                                <td class="py-4 px-4 discount">ksh 100</td>
+                                <td class="py-4 px-4 font-semibold total_price">ksh 100</td>
+                            </tr>
+
+                            <tr class="border-b">
+                                <td class="py-4 px-4">
+                                    <input type="checkbox" class="select-item"> <!-- Added checkbox -->
+                                </td>
+                                <td class="py-4 px-4">4 KG Kiimbo cooking oil, packed in a 2 container</td>
+                                <td class="py-4 px-4 quantity">2</td>
+                                <td class="py-4 px-4 discount">ksh 100</td>
+                                <td class="py-4 px-4 font-semibold total_price">ksh 100</td>
+                            </tr>
+                            
+                            <tr class="border-b">
+                                <td class="py-4 px-4">
+                                    <input type="checkbox" class="select-item"> <!-- Added checkbox -->
+                                </td>
+                                <td class="py-4 px-4">4 KG Kiimbo cooking oil, packed in a 2 container</td>
+                                <td class="py-4 px-4 quantity">2</td>
+                                <td class="py-4 px-4 discount">ksh 100</td>
+                                <td class="py-4 px-4 font-semibold total_price">ksh 100</td>
+                            </tr>
+                            
+                            <tr class="border-b">
+                                <td class="py-4 px-4">
+                                    <input type="checkbox" class="select-item"> <!-- Added checkbox -->
+                                </td>
+                                <td class="py-4 px-4">4 KG Kiimbo cooking oil, packed in a 2 container</td>
+                                <td class="py-4 px-4 quantity">2</td>
+                                <td class="py-4 px-4 discount">ksh 100</td>
+                                <td class="py-4 px-4 font-semibold total_price">ksh 100</td>
+                            </tr>
+
+
+                            <tr class="border-b">
+                                <td class="py-4 px-4">
+                                    <input type="checkbox" class="select-item"> <!-- Added checkbox -->
+                                </td>
+                                <td class="py-4 px-4">4 KG Kiimbo cooking oil, packed in a 2 container</td>
+                                <td class="py-4 px-4 quantity">2</td>
+                                <td class="py-4 px-4 discount">ksh 100</td>
+                                <td class="py-4 px-4 font-semibold total_price">ksh 100</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+
+            <!-- Total Price and Action Buttons -->
+            <div class="mt-6 flex justify-between items-center">
+                <div class="text-2xl font-bold">
+                    Total Price <span class="pink">Ksh 3,500</span>
+                </div>
+                <div class="flex space-x-4">
+                    <button class="bg-black text-white px-6 py-2 rounded-md">Hold Sale</button>
+                    <button class="bg-red-600 text-white px-6 py-2 rounded-md">Clear Sale</button>
+                    <button class="bg-green-600 text-white px-6 py-2 rounded-md">Complete Sale</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Recent Section -->
+        <aside class="w-1/6 bg-gray-100 p-4 shadow-2xl">
+            <h3 class="text-2xl font-semibold pink">Recent</h3>
+            <!-- TODO: recent transactions will appear here i think -->
+        </aside>
+    </div>
+
+    <script>
+        // To handle selected item
+        document.querySelectorAll('.select-item').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const row = this.closest('tr'); // Get the row of the clicked checkbox
+                if (this.checked) {
+                    row.classList.add('bg-pink-300'); 
+                } else {
+                    row.classList.remove('bg-pink-300'); 
+                }
+            });
+        });
+    </script>
 </body>
 </html>

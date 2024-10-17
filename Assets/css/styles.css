@@ -12,3 +12,13 @@
 .filled {
     background-color: red;
 }
+
+.pink, .total_price{
+    color: #FF0040;
+}
+.bgpink{
+    background-color: #FF0040;
+}
+.discount, .quantity{
+    color: gray;
+}
