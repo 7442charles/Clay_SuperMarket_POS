@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIN Entry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="Assets/css/styles.css">
+</head>
+<body class="relative bg-cover bg-center bg-no-repeat" style="background-image: url('Assets/bg.png');" onkeydown="handleKey(event)">
+    <!-- Background Opacity -->
+    <div class="absolute inset-0 bg-black opacity-40"></div>
+
+    <!-- Main Content Section -->
+    <div class="relative z-10 min-h-screen flex flex-col items-center justify-center">
+        <h1 class="text-white text-3xl font-bold text-center mb-4 mt-12">Claymart Supermarket, Zimmerman</h1>
+
+        <div class="bg-white p-10 shadow-lg rounded-lg">
+            <h2 class="text-xl font-semibold text-center mb-6">Hello Faith, enter your pin to continue</h2>
+
+            <!-- Pin Circles -->
+            <div class="flex justify-center space-x-4 mb-8">
+                <!-- Pin Circles - Empty initially -->
+                <div id="circle1" class="circle"></div>
+                <div id="circle2" class="circle"></div>
+                <div id="circle3" class="circle"></div>
+                <div id="circle4" class="circle"></div>
+            </div>
+
+            <!-- Keypad -->
+            <div class="grid grid-cols-3 gap-4 text-center">
+                <button class="bg-gray-300 text-xl font-semibold p-4 rounded-lg" onclick="handleInput(1)">1</button>
+                <button class="bg-gray-300 text-xl font-semibold p-4 rounded-lg" onclick="handleInput(2)">2</button>
+                <button class="bg-gray-300 text-xl font-semibold p-4 rounded-lg" onclick="handleInput(3)">3</button>
+
+                <button class="bg-gray-300 text-xl font-semibold p-4 rounded-lg" onclick="handleInput(4)">4</button>
+                <button class="bg-gray-300 text-xl font-semibold p-4 rounded-lg" onclick="handleInput(5)">5</button>
+                <button class="bg-gray-300 text-xl font-semibold p-4 rounded-lg" onclick="handleInput(6)">6</button>
+
+                <button class="bg-gray-300 text-xl font-semibold p-4 rounded-lg" onclick="handleInput(7)">7</button>
+                <button class="bg-gray-300 text-xl font-semibold p-4 rounded-lg" onclick="handleInput(8)">8</button>
+                <button class="bg-gray-300 text-xl font-semibold p-4 rounded-lg" onclick="handleInput(9)">9</button>
+
+                <button class="bg-red-500 text-white text-xl font-semibold p-4 rounded-lg" onclick="handleDelete()">X</button>
+                <button class="bg-gray-300 text-xl font-semibold p-4 rounded-lg" onclick="handleInput(0)">0</button>
+                <button class="bg-green-500 text-white text-xl font-semibold p-4 rounded-lg" onclick="handleGo()">Go</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="Assets/js/main.js"></script>
+</body>
+</html>
