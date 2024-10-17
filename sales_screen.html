@@ -146,7 +146,7 @@
                 <div class="flex space-x-4">
                     <button class="bg-black text-white px-6 py-2 rounded-md">Hold Sale</button>
                     <button id="clear-sales-btn" class="bg-red-600 text-white px-6 py-2 rounded-md">Clear Sale</button>
-                    <button class="bg-green-600 text-white px-6 py-2 rounded-md">Complete Sale</button>
+                    <button id="complete-sale-btn" class="bg-green-600 text-white px-6 py-2 rounded-md">Complete Sale</button>
                 </div>
             </div>
         </main>
@@ -157,6 +157,73 @@
             <!-- TODO: recent transactions will appear here i think -->
         </aside>
     </div>
+
+
+<!-- Modal Popup Structure -->
+<div id="complete-sale-modal" class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden flex justify-center items-center z-50">
+    <div class="p-6 bg-white dark:bg-card rounded-lg shadow-md w-full max-w-md">
+      <h2 class="text-lg font-bold mb-4">Complete the sale</h2>
+      <div class="mb-4">
+        <span class="text-xl font-bold">Total Amount</span>
+        <span class="text-xl font-bold pink"> Ksh 3,500</span>
+      </div>
+      <div class="mb-4">
+        <span class="font-small">Discount given</span>
+        &nbsp;&nbsp;
+        <span class="text-muted-foreground"> N/A</span>
+      </div>
+
+      <h3 class="font-medium mb-2">Mode of payment</h3>
+      <div class="grid grid-cols-3 gap-4 mb-4">
+        <div class="border p-4 text-center">
+          <img aria-hidden="true" alt="mpesa" src="Assets/mpesa.png" />
+          <p>mpesa</p>
+        </div>
+        <div class="border p-4 text-center">
+          <img aria-hidden="true" alt="credit card" src="Assets/credit_card.png" />
+          <p>credit card</p>
+        </div>
+        <div class="border p-4 text-center">
+          <img aria-hidden="true" alt="cash money" src="Assets/cash_money.png" />
+          <p>cash money</p>
+        </div>
+      </div>
+      <div class="mb-4">
+        <div class="flex justify-between">
+          <span class="font-medium">Amount paid</span>
+          <span class="font-medium">Ksh 4000</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="font-medium">Change</span>
+          <span class="font-medium">Ksh 500</span>
+        </div>
+      </div>
+      <div class="flex space-x-4">
+        <button class="bgpink text-white p-2  flex-1">Complete and print</button>
+        <button id="close-modal" class="bg-secondary pink p-2  flex-1" style="border: 2px; border-color: #FF0040;">Go back to sale</button>
+      </div>
+    </div>
+  </div>
+  
+
+
+<script>
+  // Get modal, button and close elements
+  const modal = document.getElementById('complete-sale-modal');
+  const completeSaleBtn = document.getElementById('complete-sale-btn');
+  const closeModal = document.getElementById('close-modal');
+
+  // Open modal when Complete Sale button is clicked
+  completeSaleBtn.addEventListener('click', function() {
+    modal.classList.remove('hidden');  // Show modal
+  });
+
+  // Close modal when Go back to sale button is clicked
+  closeModal.addEventListener('click', function() {
+    modal.classList.add('hidden');  // Hide modal
+  });
+</script>
+
 
     <script>
         // To handle selected item
